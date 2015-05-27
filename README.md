@@ -27,11 +27,11 @@ From the "46 Simple Python Exercises" by Torbjörn Lager @ http://www.ling.gu.se
 
 (12) Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
 
-`****`
-
-`*********`
-
-`*******`
+```
+****
+*********
+*******
+```
 
 (13) The function max() from exercise 1) and the function max_of_three() from exercise 2) will only work for two and three numbers, respectively. But suppose we have a much larger number of numbers, or suppose we cannot tell in advance how many they are? Write a function max_in_list() that takes a list of numbers and returns the largest one.
 
@@ -121,11 +121,13 @@ Your task in this exercise is to define a function make_ing_form() which given a
 
 (35) The International Civil Aviation Organization (ICAO) alphabet assigns code words to the letters of the English alphabet acrophonically (Alfa for A, Bravo for B, etc.) so that critical combinations of letters (and numbers) can be pronounced and understood by those who transmit and receive voice messages by radio or telephone regardless of their native language, especially when the safety of navigation or persons is essential. Here is a Python dictionary covering one version of the ICAO alphabet:
 
+```
 d = {'a':'alfa', 'b':'bravo', 'c':'charlie', 'd':'delta', 'e':'echo', 'f':'foxtrot',
      'g':'golf', 'h':'hotel', 'i':'india', 'j':'juliett', 'k':'kilo', 'l':'lima',
      'm':'mike', 'n':'november', 'o':'oscar', 'p':'papa', 'q':'quebec', 'r':'romeo',
      's':'sierra', 't':'tango', 'u':'uniform', 'v':'victor', 'w':'whiskey', 
      'x':'x-ray', 'y':'yankee', 'z':'zulu'}
+```
 
 Your task in this exercise is to write a procedure speak_ICAO() able to translate any text (i.e. any string) into spoken ICAO words. You need to import at least two libraries: os and time. On a mac, you have access to the system TTS (Text-To-Speech) as follows: os.system('say ' + msg), where msg is the string to be spoken. (Under UNIX/Linux and Windows, something similar might exist.) Apart from the text to be spoken, your procedure also needs to accept two additional parameters: a float indicating the length of the pause between each spoken ICAO word, and a float indicating the length of the pause between each word spoken.
 
@@ -137,6 +139,7 @@ Your task in this exercise is to write a procedure speak_ICAO() able to translat
 
 (39) Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com) This is how it should work when run in a terminal:
 
+```
 >>> import guess_number
 Hello! What is your name?
 Torbjörn
@@ -150,9 +153,11 @@ Your guess is too low.
 Take a guess.
 18
 Good job, Torbjörn! You guessed my number in 3 guesses!
+```
 
 (40) An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., orchestra = carthorse, A decimal point = I'm a dot in place. Write a Python program that, when started 1) randomly picks a word w from given list of words, 2) randomly permutes w (thus creating an anagram of w), 3) presents the anagram to the user, and 4) enters an interactive loop in which the user is invited to guess the original word. It may be a good idea to work with (say) colour words only. The interaction with the program may look like so:
 
+```
 >>> import anagram
 Colour word anagram: onwbr
 Guess the colour word!
@@ -160,9 +165,11 @@ black
 Guess the colour word!
 brown
 Correct!
+```
 
 (41) In a game of Lingo, there is a hidden word, five characters long. The object of the game is to find this word by guessing, and in return receive two kinds of clues: 1) the characters that are fully correct, with respect to identity as well as to position, and 2) the characters that are indeed present in the word, but which are placed in the wrong position. Write a program with which one can play Lingo. Use square brackets to mark characters correct in the sense of 1), and ordinary parentheses to mark characters correct in the sense of 2). Assuming, for example, that the program conceals the word "tiger", you should be able to interact with it in the following way:
 
+```
 >>> import lingo
 snake
 Clue: snak(e)
@@ -172,6 +179,7 @@ times
 Clue: [t][i]m[e]s
 tiger
 Clue: [t][i][g][e][r]
+```
 
 
 ####Somewhat harder exercises
@@ -180,43 +188,57 @@ Clue: [t][i][g][e][r]
 
 Sentence boundaries occur at one of "." (periods), "?" or "!", except that
 
-    Periods followed by whitespace followed by a lower case letter are not sentence boundaries.
-    Periods followed by a digit with no intervening whitespace are not sentence boundaries.
-    Periods followed by whitespace and then an upper case letter, but preceded by any of a short list of titles are not sentence boundaries. Sample titles include Mr., Mrs., Dr., and so on.
-    Periods internal to a sequence of letters with no adjacent whitespace are not sentence boundaries (for example, www.aptex.com, or e.g).
-    Periods followed by certain kinds of punctuation (notably comma and more periods) are probably not sentence boundaries.
+```
+a.Periods followed by whitespace followed by a lower case letter are not sentence boundaries.
+b.Periods followed by a digit with no intervening whitespace are not sentence boundaries.
+c.Periods followed by whitespace and then an upper case letter, but preceded by any of a short
+    list of titles are not sentence boundaries. Sample titles include Mr., Mrs., Dr., and so on.
+d.Periods internal to a sequence of letters with no adjacent whitespace are not sentence
+    boundaries (for example, www.aptex.com, or e.g).
+e.Periods followed by certain kinds of punctuation (notably comma and more periods) are probably
+    not sentence boundaries.
+```
 
 Your task here is to write a program that given the name of a text file is able to write its content with each sentence on a separate line. Test your program with the following short text: Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it. Did he mind? Adam Jones Jr. thinks he didn't. In any case, this isn't true... Well, with a probability of .9 it isn't. The result should be:
 
+```
 Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it.
 Did he mind?
 Adam Jones Jr. thinks he didn't.
 In any case, this isn't true...
 Well, with a probability of .9 it isn't.
+```
 
 (43) An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., orchestra = carthorse. Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that finds the sets of words that share the same characters that contain the most words in them.
 
 (44) Your task in this exercise is as follows:
 
-    Generate a string with N opening brackets ("[") and N closing brackets ("]"), in some arbitrary order.
-    Determine whether the generated string is balanced; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest. 
+```
+a. Generate a string with N opening brackets ("[") and N closing brackets ("]"), in some arbitrary order.
+b. Determine whether the generated string is balanced; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest. 
+```
 
 Examples:
 
+```
    []        OK   ][        NOT OK
    [][]      OK   ][][      NOT OK
    [[][]]    OK   []][[]    NOT OK
+```
 
 (45) A certain childrens game involves starting with a word in a particular category. Each participant in turn says a word, but that word must begin with the final letter of the previous word. Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, they fall out of the game. For example, with "animals" as the category,
 
+```
 Child 1: dog 
 Child 2: goldfish
 Child 1: hippopotamus
 Child 2: snake
 ...
+```
 
 Your task in this exercise is as follows: Take the following selection of 70 English Pokemon names (extracted from Wikipedia's list of Pokemon) and generate the/a sequence with the highest possible number of Pokemon names where the subsequent name starts with the final letter of the preceding name. No Pokemon name is to be repeated.
 
+```
 audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
 cresselia croagunk darmanitan deino emboar emolga exeggcute gabite
 girafarig gulpin haxorus heatmor heatran ivysaur jellicent jumpluff kangaskhan
@@ -225,10 +247,13 @@ nosepass petilil pidgeotto pikachu pinsir poliwrath poochyena porygon2
 porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
 sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
 tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask
+```
 
 (46) An alternade is a word in which its letters, taken alternatively in a strict sequence, and used in the same order as the original word, make up at least two other words. All letters must be used, but the smaller words are not necessarily of the same length. For example, a word with seven letters where every second letter is used will produce a four-letter word and a three-letter word. Here are two examples:
 
-  "board": makes "bad" and "or".
-  "waists": makes "wit" and "ass".
+```
+"board": makes "bad" and "or".
+"waists": makes "wit" and "ass".
+```
 
 Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion. 
