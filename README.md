@@ -214,8 +214,10 @@ Well, with a probability of .9 it isn't.
 (44) Your task in this exercise is as follows:
 
 ```
-a. Generate a string with N opening brackets ("[") and N closing brackets ("]"), in some arbitrary order.
-b. Determine whether the generated string is balanced; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest. 
+a. Generate a string with N opening brackets ("[") and N closing brackets ("]"),
+    in some arbitrary order.
+b. Determine whether the generated string is balanced; that is, whether it consists
+    entirely of pairs of opening/closing brackets (in that order), none of which mis-nest. 
 ```
 
 Examples:
