@@ -1,7 +1,7 @@
 # Python-Exercises
 From the "46 Simple Python Exercises" by Torbjörn Lager @ http://www.ling.gu.se/~lager/python_exercises.html
 
----Very simple exercises---
+####Very simple exercises
 
 (1) Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the max() function built in, but writing it yourself is nevertheless a good exercise.)
 
@@ -60,6 +60,7 @@ Your task here is write a Python program capable of generating all the verses of
 
 (22) In cryptography, a Caesar cipher is a very simple encryption techniques in which each letter in the plain text is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it to communicate with his generals. ROT-13 ("rotate by 13 places") is a widely used example of a Caesar cipher where the shift is 13. In Python, the key for ROT-13 may be represented by means of the following dictionary:
 
+```
 key = {'a':'n', 'b':'o', 'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u', 
        'i':'v', 'j':'w', 'k':'x', 'l':'y', 'm':'z', 'n':'a', 'o':'b', 'p':'c', 
        'q':'d', 'r':'e', 's':'f', 't':'g', 'u':'h', 'v':'i', 'w':'j', 'x':'k',
@@ -67,6 +68,7 @@ key = {'a':'n', 'b':'o', 'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u',
        'G':'T', 'H':'U', 'I':'V', 'J':'W', 'K':'X', 'L':'Y', 'M':'Z', 'N':'A', 
        'O':'B', 'P':'C', 'Q':'D', 'R':'E', 'S':'F', 'T':'G', 'U':'H', 'V':'I', 
        'W':'J', 'X':'K', 'Y':'L', 'Z':'M'}
+```
 
 Your task in this exercise is to implement an encoder/decoder of ROT-13. Once you're done, you will be able to read the following secret message:
 
@@ -94,7 +96,7 @@ Your task in this exercise is to define a function make_3sg_form() which given a
 Your task in this exercise is to define a function make_ing_form() which given a verb in infinitive form returns its present participle form. Test your function with words such as lie, see, move and hug. However, you must not expect such simple rules to work for all cases.
 
 
----Higher order functions and list comprehensions---
+####Higher order functions and list comprehensions
 
 (26) Using the higher order function reduce(), write a function max_in_list() that takes a list of numbers and returns the largest one. Then ask yourself: why define and call a new function, when I can just as well call the reduce() function directly?
 
@@ -109,7 +111,7 @@ Your task in this exercise is to define a function make_ing_form() which given a
 (31) Implement the higher order functions map(), filter() and reduce(). (They are built-in but writing them yourself may be a good exercise.)
 
 
----Simple exercises including I/O---
+####Simple exercises including I/O
 
 (32) Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome.
 
@@ -172,7 +174,7 @@ tiger
 Clue: [t][i][g][e][r]
 
 
----Somewhat harder exercises---
+####Somewhat harder exercises
 
 (42) A sentence splitter is a program capable of splitting a text into sentences. The standard set of heuristics for sentence splitting includes (but isn't limited to) the following rules:
 
